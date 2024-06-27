@@ -1,5 +1,5 @@
 import React from 'react';
-import { InView } from 'react-intersection-observer'; // Importar InView
+import { InView } from 'react-intersection-observer';
 import '../styles/About.css';
 import foto1 from "../about-photos/me.jpg";
 
@@ -24,9 +24,9 @@ const About = () => {
         <InView triggerOnce>
           {({ inView, ref }) => (
             <div ref={ref} className={`about-bio ${inView ? 'visible' : ''}`}>
-              <h3>¡Hello! I'm Juanpa</h3>
+              <h3><span className="hello-text">Hello! </span> I'm Juanpa Quesada Caballero</h3>
               <p>
-              I am a nature Photographer and Software Engineering student, a young Costa Rican passionate about technology, photography, nature, traveling and showing the world the beauties found in them.
+                I am a Nature Photographer and Software Engineering student from Costa Rica, deeply passionate about technology, photography, nature, and travel. My goal is to capture and showcase the beauty of the world through my lens.
               </p>
             </div>
           )}
