@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { InView } from 'react-intersection-observer'; // Importar InView
+import { FaShareAlt } from 'react-icons/fa'; // Importar ícono de compartir
 import '../styles/Contact.css';
 
 const Contact = () => {
@@ -43,12 +44,27 @@ const Contact = () => {
       });
   };
 
+  const handleShare = async () => {
+    try {
+      await navigator.share({
+        title: 'Check out this website',
+        text: 'I found this amazing website, check it out!',
+        url: window.location.href
+      });
+    } catch (error) {
+      console.error('Error sharing:', error.message);
+    }
+  };
+
   return (
     <section id="contact" className="contact">
       <InView triggerOnce>
         {({ inView, ref }) => (
           <h2 ref={ref} className={`contact-text ${inView ? 'visible' : ''}`}>
-            Contact
+            Contact{' '}
+            <button className="share-button" onClick={handleShare} aria-label="Share website">
+              <FaShareAlt />
+            </button>
           </h2>
         )}
       </InView>
