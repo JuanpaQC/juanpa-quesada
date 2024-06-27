@@ -26,8 +26,7 @@ const About = () => {
             <div ref={ref} className={`about-bio ${inView ? 'visible' : ''}`}>
               <h3>¡Hello! I'm Juanpa</h3>
               <p>
-                Aquí va una breve biografía sobre ti. Puedes hablar sobre tu experiencia,
-                tus intereses y cualquier otra cosa que te gustaría compartir.
+              I am a nature Photographer and Software Engineering student, a young Costa Rican passionate about technology, photography, nature, traveling and showing the world the beauties found in them.
               </p>
             </div>
           )}
