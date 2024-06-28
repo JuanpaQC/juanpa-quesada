@@ -111,4 +111,12 @@
     flex: 1; /* Vuelve a dividir el espacio entre las dos secciones */
     margin-bottom: 0; /* Elimina el margen entre las secciones en pantallas más grandes */
   }
+
+  .contact h2 {
+    justify-content: flex-start; /* Alinear hacia el inicio en dispositivos Android */
+  }
+
+  .share-button {
+    margin-left: 0.5rem; /* Espacio entre el botón y el texto en dispositivos Android */
+  }
 }
