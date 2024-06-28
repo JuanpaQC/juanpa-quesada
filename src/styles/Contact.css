@@ -101,7 +101,6 @@
 .elfsight-app-e3f94b44-bc6a-4d6d-beb8-d0cbf7a9aca3 {
   width: 100%;
 }
-
 @media (min-width: 768px) {
   .contact-container {
     flex-direction: row; /* Vuelve a la dirección de fila en pantallas más grandes */
@@ -113,10 +112,14 @@
   }
 
   .contact h2 {
-    justify-content: flex-start; /* Alinear hacia el inicio en dispositivos Android */
+    text-align: right; /* Alinear el texto a la derecha */
+    margin-top: 1rem; /* Margen superior */
+    margin-right: 1rem; /* Margen derecho */
   }
 
   .share-button {
-    margin-left: 0.5rem; /* Espacio entre el botón y el texto en dispositivos Android */
+    margin-top: 1rem; /* Añadir margen superior al botón de compartir */
+    margin-left: 0.5rem; /* Espacio entre el botón y el texto */
   }
 }
+
