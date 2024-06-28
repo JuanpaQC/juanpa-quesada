@@ -39,6 +39,7 @@
 }
 
 .portfolio-title {
+  font-weight: bold;
   position: absolute;
   bottom: 5px;
   left: 5px;
