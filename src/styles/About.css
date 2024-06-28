@@ -79,3 +79,19 @@
   transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Cambia a columna en dispositivos móviles */
+    align-items: center; /* Centra horizontalmente en dispositivos móviles */
+  }
+
+  .about-photo img {
+    width: 250px; /* Reducir tamaño de la imagen en dispositivos móviles */
+    height: 250px; /* Reducir tamaño de la imagen en dispositivos móviles */
+  }
+
+  .about h2 {
+    margin-top: 0.1rem; /* Ajusta el margen superior en dispositivos móviles */
+    margin-bottom: 40px;
+  }
+}

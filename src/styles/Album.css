@@ -174,3 +174,32 @@
 .nav-right {
   right: 10px;
 }
+
+/* Estilos específicos para la versión móvil */
+
+@media (max-width: 768px) {
+  .album-grid {
+    grid-template-columns: repeat(1, 1fr); /* Dos columnas para álbumes más pequeños */
+    gap: 10px; /* Reducir espacio entre álbumes */
+  }
+
+  .album-item:nth-child(1),
+  .album-item:nth-child(2),
+  .album-item:nth-child(3),
+  .album-item:nth-child(4),
+  .album-item:nth-child(5),
+  .album-item:nth-child(6),
+  .album-item:nth-child(7) {
+    grid-column: span 1; /* Ajustar todos los álbumes a una columna */
+    grid-row: auto; /* Permitir que los álbumes fluyan automáticamente */
+  }
+
+  .album-cover {
+    height: 100%; /* Ajustar altura para álbumes más pequeños */
+    object-fit: cover;
+  }
+
+  .album-title {
+    font-size: 0.8em; /* Ajustar tamaño de fuente para álbumes más pequeños */
+  }
+}

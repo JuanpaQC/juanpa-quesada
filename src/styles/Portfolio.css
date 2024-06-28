@@ -149,3 +149,14 @@
   position: absolute;
   bottom: 10px;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Cambia a una columna para dispositivos móviles */
+  }
+
+  .portfolio-item {
+    width: 100%; /* Asegura que ocupe el ancho completo */
+  }
+}

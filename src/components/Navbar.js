@@ -18,7 +18,7 @@ const Navbar = () => {
         <li><a href="#portfolio" onClick={(e) => scrollToSection('portfolio', e)} className='portfolio-button'>Portfolio</a></li>
         <li><a href="#albums" onClick={(e) => scrollToSection('albums', e)} className='album-button'>Albums</a></li>
       </ul>
-      <img src={logo} alt='Juanpa Quesada Photography Logo' className='navbar-logo'/>
+      <img src={logo} alt='Juanpa Quesada Photography Logo' className='navbar-logo' onClick={() => scrollToSection('welcome')} />
       <ul className="right">
         <li><a href="#about" onClick={(e) => scrollToSection('about', e)} className='about-button'>About</a></li>
         <li><a href="#contact" onClick={(e) => scrollToSection('contact', e)} className='contact-button'>Contact</a></li>

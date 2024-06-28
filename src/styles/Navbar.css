@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
 
-
 .navbar {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.096), rgba(255, 255, 255, 0));
   backdrop-filter: blur(2px);
@@ -8,7 +7,7 @@
   position: absolute;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   padding: 10px 0;
   transition: background-color 0.3s ease;
   font-family: Harlow Solid Italic;
@@ -81,3 +80,133 @@
   height: 90px; /* Ajusta el tamaño del logo */
   margin: 0 40px; /* Añade espacio alrededor del logo */
 }
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20; /* Ensure the toggle button is above the menu */
+}
+
+.navbar-toggle-icon {
+  width: 30px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 15px; /* Ensure the sidebar is above other elements */
+  padding: 20px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar-logo {
+    margin: 0 auto;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: left 0.3s ease-in-out;
+    z-index: 100; /* Ensure the sidebar is above other elements */
+    padding: 20px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+}
+
+
