@@ -112,14 +112,11 @@
   }
 
   .contact h2 {
-    text-align: right; /* Alinear el texto a la derecha */
-    margin-top: 1rem; /* Margen superior */
-    margin-right: 1rem; /* Margen derecho */
+    justify-content: flex-start; /* Alinear hacia el inicio en dispositivos Android */
   }
 
   .share-button {
-    margin-top: 1rem; /* Añadir margen superior al botón de compartir */
-    margin-left: 0.5rem; /* Espacio entre el botón y el texto */
+    margin-left: 0.5rem; /* Espacio entre el botón y el texto en dispositivos Android */
   }
 }
 
